@@ -1,0 +1,50 @@
+@startuml
+set namespaceSeparator ::
+
+class "vivaoinseto_tg::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::main.dart::MyApp"
+
+class "vivaoinseto_tg::pages::configuracoes.dart::Configuracoes" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::pages::configuracoes.dart::Configuracoes"
+
+class "vivaoinseto_tg::pages::galeria.dart::Galeria" {
+  +State<Galeria> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "vivaoinseto_tg::pages::galeria.dart::Galeria"
+
+class "vivaoinseto_tg::pages::galeria.dart::_GaleriaState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "vivaoinseto_tg::pages::galeria.dart::_GaleriaState"
+
+
+class "vivaoinseto_tg::pages::login.dart::Login" {
+  +State<Login> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "vivaoinseto_tg::pages::login.dart::Login"
+
+class "vivaoinseto_tg::pages::login.dart::_LoginState" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "vivaoinseto_tg::pages::login.dart::_LoginState"
+
+
+class "vivaoinseto_tg::pages::telainicial.dart::TelaInicial" {
+  +Widget build()
+  -dynamic _abreOutraTela()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::pages::telainicial.dart::TelaInicial"
+
+
+@enduml

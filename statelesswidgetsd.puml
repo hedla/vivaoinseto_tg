@@ -1,0 +1,57 @@
+@startuml
+set namespaceSeparator ::
+
+class "vivaoinseto_tg::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::main.dart::MyApp"
+
+class "vivaoinseto_tg::pages::configuracoes.dart::Configuracoes" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::pages::configuracoes.dart::Configuracoes"
+
+class "vivaoinseto_tg::pages::telainicial.dart::TelaInicial" {
+  +Widget build()
+  -dynamic _abreOutraTela()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::pages::telainicial.dart::TelaInicial"
+
+class "vivaoinseto_tg::widgets::botao.dart::Botao" {
+  +String textoBotao
+  +void Function() onPressed
+  +Widget build()
+}
+
+"vivaoinseto_tg::widgets::botao.dart::Botao" o-- "null::void Function()"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::widgets::botao.dart::Botao"
+
+class "vivaoinseto_tg::widgets::input.dart::InputTexto" {
+  +String rotulo
+  +String label
+  +TextEditingController controller
+  +Widget build()
+}
+
+"vivaoinseto_tg::widgets::input.dart::InputTexto" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::widgets::input.dart::InputTexto"
+
+class "vivaoinseto_tg::widgets::textos.dart::TextosCentro" {
+  +String param
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::widgets::textos.dart::TextosCentro"
+
+class "vivaoinseto_tg::widgets::widget_texto.dart::Textos" {
+  +String seutexto
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "vivaoinseto_tg::widgets::widget_texto.dart::Textos"
+
+
+@enduml
